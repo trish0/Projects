@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test maps</title>
+</head>
+<style type="text/css"> 		
+	#map-container{
+		width: 500px;
+		height: 500px;
+	}
+	/* map parameters 
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js">
+    </script>
+
+<script type="text/javascript">
+	var points = [
+		{
+			'lat': 34345,
+			'lng': 245222
+		},
+		{
+			'lat': 34454345,
+			'lng': 24522211
+		},
+	];
+	//range of coordinates
+	var map;
+		function initMap() {
+	        var myLatLng = {lat: -25.363, lng: 131.044};
+	    	var myLatLong1 = {lat: -30.543, lng: 132.077};
+	    	var myLatLng1 = {lat:-18.346, lng: 131.342};
+	    	//3 point with coordinates
+	        map = new google.maps.Map(document.getElementById('map-container'), {
+	          zoom: 4,
+	          center: myLatLng
+	        });
+	        //creating map whith center
+	        var marker = new google.maps.Marker({
+	          position: myLatLng,
+	          map: map,
+	          title: 'M'
+	      });
+	        var marker = new google.maps.Marker({
+	          position: myLatLong1,
+	          map: map,
+	          title: 'M1'
+	      });
+	        var marker = new google.maps.Marker({
+	          position: myLatLng1,
+	          map: map,
+	          title: 'M2'
+	      });
+	       // create marker of the points
+	      }
+	$(document).on('ready', function (argument) {
+		initMap();
+	});
+</script>
+<body>
+	<div id="map-container">
+		
+	</div>
+</body>
+</html>
